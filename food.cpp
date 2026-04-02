@@ -168,6 +168,13 @@ void loop()
 
     press();
 
+  
+  if (state_GAS == IDLE) {
+    waiting = 1;
+    measuring = 0;
+    
+    
+  }
 
     if (state_GAS == MEASURING) {
         WaitStabilization();
@@ -390,5 +397,3 @@ void CheckSpoilage() { // 부패 상태 판단 함수
         state_GAS = MEASURING;
     }
 }
-
-
